@@ -1,0 +1,807 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DocUnion.View.DetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DocUnion.Commons;assemly=DocUnion"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Title="完善资料"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <RelativeLayout>
+                <BoxView
+                    HeightRequest="100"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    Color="White" />
+
+                <Image
+                    x:Name="image"
+                    BackgroundColor="White"
+                    HeightRequest="140"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Width,
+                                                                      Factor=.5,
+                                                                      Constant=-70}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Factor=0,
+                                                                      Property=Y,
+                                                                      Constant=70}"
+                    Source="{local:ImageResource DocUnion.Image.logo.jpg}"
+                    WidthRequest="140" />
+
+                <Label
+                    x:Name="imagechange"
+                    FontSize="26"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=210}"
+                    Text="点击更换头像"
+                    TextColor="Gray" />
+
+
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=280}">
+                    <Image
+                        x:Name="birthimage"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0,
+                                                                          Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Source="{local:ImageResource DocUnion.Image.calendar.png}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+
+
+                    <Label
+                        x:Name="birthlable"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="生日"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+
+
+                    <DatePicker
+                        x:Name="fromDatePicker"
+                        BackgroundColor="White"
+                        Date="{x:Static sys:DateTime.Now}"
+                        DateSelected="fromDatePicker_DateSelected"
+                        Format="yyyy-MM-dd"
+                        HeightRequest="40"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.45,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        TextColor="Gray"
+                        VerticalOptions="Center" />
+                </RelativeLayout>
+                
+                
+                
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=330}">
+                    <Image
+                        x:Name="seximage"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0,
+                                                                          Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Source="{local:ImageResource DocUnion.Image.calendar.png}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+
+
+                    <Label
+                        x:Name="sexlable"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="性別"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+                    <Picker
+                        x:Name="birtpicker"
+                        Title="性別"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.45,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        SelectedIndex="0"
+                        SelectedIndexChanged="birtpicker_SelectedIndexChanged"
+                        TextColor="Gray"
+                        VerticalOptions="EndAndExpand" />
+
+
+
+                </RelativeLayout>
+                
+                
+                
+
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=380}">
+                    <Image
+                        x:Name="nameimage"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0,
+                                                                          Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Source="{local:ImageResource DocUnion.Image.person.png}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+
+
+                    <Label
+                        x:Name="namelable"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="姓名"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+                    <Entry
+                        x:Name="nametext"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="End"
+                        Placeholder="请输入姓名"
+                        PlaceholderColor="Gray"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.45,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        TextColor="Gray"
+                        VerticalOptions="End" />
+
+
+                </RelativeLayout>
+                
+                
+                
+
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=430}">
+                    <Image
+                        x:Name="hospitalimage"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0,
+                                                                          Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Source="{local:ImageResource DocUnion.Image.hospital.png}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+
+
+                    <Label
+                        x:Name="hospitallable"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="医院"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+                    <Entry
+                        x:Name="hospitaltext"
+                        BackgroundColor="White"
+                        Focused="hospitaltext_Focused"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="End"
+                        Placeholder="点击选择医院"
+                        PlaceholderColor="Gray"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.45,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        TextColor="Gray"
+                        VerticalOptions="End" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=480}">
+                    <Image
+                        x:Name="depimage"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0,
+                                                                          Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Source="{local:ImageResource DocUnion.Image.hospital.png}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+
+
+                    <Label
+                        x:Name="deplable"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="科室"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+                    <Entry
+                        x:Name="depltext"
+                        BackgroundColor="White"
+                        Focused="depltext_Focused"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="End"
+                        Placeholder="点击选择科室"
+                        PlaceholderColor="Gray"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.45,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        TextColor="Gray"
+                        VerticalOptions="End" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=530}">
+                    <Image
+                        x:Name="wellimage"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0,
+                                                                          Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Source="{local:ImageResource DocUnion.Image.hospital.png}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+
+
+                    <Label
+                        x:Name="welllable"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="擅长领域"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+                    <Entry
+                        x:Name="wellltext"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="End"
+                        Placeholder="点击填写"
+                        PlaceholderColor="Gray"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.45,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        TextColor="Gray"
+                        VerticalOptions="End" />
+
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=580}">
+                    <Image
+                        x:Name="titleimage"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0,
+                                                                          Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Source="{local:ImageResource DocUnion.Image.school.png}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+
+
+                    <Label
+                        x:Name="titlelable"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="职称"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+                    <Picker
+                        x:Name="titlepicker"
+                        Title="职称"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.45,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        SelectedIndex="0"
+                        SelectedIndexChanged="titlepicker_SelectedIndexChanged"
+                        TextColor="Gray"
+                        VerticalOptions="EndAndExpand" />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=630}">
+                    <Image
+                        x:Name="majorimage"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0,
+                                                                          Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Source="{local:ImageResource DocUnion.Image.school.png}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+
+
+                    <Label
+                        x:Name="majorlable"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="专业"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+                    <Entry
+                        x:Name="majortext"
+                        BackgroundColor="White"
+                        Focused="majortext_Focused"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="End"
+                        Placeholder="选择专业"
+                        PlaceholderColor="Gray"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.45,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.5,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        TextColor="Gray"
+                        VerticalOptions="End" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=680}">
+
+                    <Image
+                        x:Name="jiaooyuimage"
+                        BackgroundColor="White"
+                        HeightRequest="40"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0,
+                                                                          Constant=10}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Source="{local:ImageResource DocUnion.Image.school.png}"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+
+                    <Label
+                        x:Name="benke1"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="教育经历"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+
+
+                    <Label
+                        x:Name="benke2"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.4,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="入学时间"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+                    <Label
+                        x:Name="benke3"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.65,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="学校"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    BackgroundColor="Red"
+                    HeightRequest="50"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Y,
+                                                                      Factor=0,
+                                                                      Constant=730}">
+
+
+
+                    <Label
+                        x:Name="benke"
+                        FontSize="20"
+                        BackgroundColor="White"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="Center"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=.15,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Factor=0,
+                                                                          Property=Y,
+                                                                          Constant=5}"
+                        Text="本科"
+                        TextColor="Gray"
+                        VerticalTextAlignment="Center" />
+
+
+                    <DatePicker
+                        x:Name="benkeDatePicker"
+                        BackgroundColor="White"
+                        Date="{x:Static sys:DateTime.Now}"
+                        DateSelected="fromDatePicker_DateSelected"
+                        Format="yyyy-MM-dd"
+                        HeightRequest="40"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.2,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.4,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        TextColor="Gray"
+                        VerticalOptions="Center" />
+                    <Entry
+                        x:Name="benketext"
+                        BackgroundColor="White"
+                        Focused="benketext_Focused"
+                        HeightRequest="40"
+                        HorizontalTextAlignment="End"
+                        Placeholder="选择学校"
+                        PlaceholderColor="Gray"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width,
+                                                                              Factor=0.2,
+                                                                              Constant=0}"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Width,
+                                                                          Factor=0.65,
+                                                                          Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                          Property=Y,
+                                                                          Factor=0,
+                                                                          Constant=5}"
+                        TextColor="Gray"
+                        VerticalOptions="End" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

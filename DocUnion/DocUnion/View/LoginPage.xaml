@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DocUnion.Commons;assembly=DocUnion"
+            x:Class="DocUnion.View.LoginPage">
+  <ContentPage.BackgroundColor>White</ContentPage.BackgroundColor>
+ 
+  
+<StackLayout x:Name="Logolayout" VerticalOptions="Start" HorizontalOptions="Center" BackgroundColor="White" >
+  <StackLayout.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.Android>0, 40, 0, 0</OnPlatform.Android>
+    </OnPlatform>
+  </StackLayout.Padding>
+  <Image x:Name="Logoimage" Source="{local:ImageResource DocUnion.Image.logo.jpg}"></Image>
+
+  
+  <StackLayout x:Name="UserInfo" VerticalOptions="StartAndExpand" HorizontalOptions="Center" BackgroundColor="White">
+
+    
+    <StackLayout.Padding>
+      <OnPlatform x:TypeArguments="Thickness">
+        <OnPlatform.Android>0, 40, 0, 0</OnPlatform.Android>
+      </OnPlatform>
+    </StackLayout.Padding>
+    
+    <Entry x:Name="UserIdEntry"  Text = ""  Keyboard="Telephone" Placeholder="请输入手机号/邮箱" PlaceholderColor="Black"  TextColor="Black"></Entry>
+  <Entry x:Name="PasseordEntry"  Text = "" IsPassword="True" Placeholder="请输入密码" PlaceholderColor="Black" TextColor="Black"></Entry>
+    
+  </StackLayout>
+<StackLayout x:Name="Login" VerticalOptions="StartAndExpand" HorizontalOptions="Center" BackgroundColor="White">
+
+
+    <StackLayout.Padding>
+      <OnPlatform x:TypeArguments="Thickness">
+        <OnPlatform.Android>0, 30, 0, 0</OnPlatform.Android>
+      </OnPlatform>
+    </StackLayout.Padding>
+  
+  <Button x:Name="btLogin" Text="登录" BackgroundColor="Black" Clicked="Button_Login_OnClicked" ></Button>
+    
+    
+  </StackLayout>
+  
+  <StackLayout Padding="0,10,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="Center" Orientation="Horizontal" BackgroundColor="White">
+    
+    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Center" Orientation="Vertical" BackgroundColor="White">
+      <Button Text="马上注册" BackgroundColor="White" TextColor="Black"  Clicked="Button_Signup_OnClicked">
+        
+      </Button>
+    </StackLayout>
+    
+    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Center" Orientation="Vertical" BackgroundColor="White" >
+      <Button  Text="忘记密码" BackgroundColor="White"  TextColor="Black" Clicked="Button_Reset_OnClicked" >
+        
+      </Button>
+    </StackLayout>
+    
+  </StackLayout>
+  
+  
+</StackLayout>
+  </ContentPage>

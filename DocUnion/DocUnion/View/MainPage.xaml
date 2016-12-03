@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DocUnion.View.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Main Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnLougoutButtonClicked" Text="Lougout" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                HorizontalOptions="Center"
+                Text="Main app content goes here"
+                VerticalOptions="CenterAndExpand" />
+            <Button x:Name=" dfg" Text="dfdfdf" />
+            <Button x:Name="fgf" Text="dfddfdf" />
+            <Button x:Name="fgf2" Text="dfddfdf" />
+            <Button x:Name="fgf3" Text="dfddfdf" />
+            <BoxView x:Name="dfdfdfs" Color="Navy" />
+            <Image x:Name="sdsda" Source="logo.jpg" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
